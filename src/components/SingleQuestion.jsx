@@ -11,7 +11,7 @@ const reducer = (state, action) => {
   if (action.type === TOGGLE_BTN) {
     return { ...state, showInfo: !state.showInfo };
   }
-  return state;
+  throw new Error(`No matching "${action.type}" - action type`);
 };
 
 const SingleQuestion = ({ info, title }) => {
