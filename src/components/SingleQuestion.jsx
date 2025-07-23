@@ -1,17 +1,10 @@
 import React, { useReducer } from "react";
 import { AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
-
-const TOGGLE_BTN = "TOGGLE_BTN";
+import reducer from "./hooks/reducer";
+import { TOGGLE_BTN } from "./actions";
 
 const defaultState = {
   showInfo: false,
-};
-
-const reducer = (state, action) => {
-  if (action.type === TOGGLE_BTN) {
-    return { ...state, showInfo: !state.showInfo };
-  }
-  throw new Error(`No matching "${action.type}" - action type`);
 };
 
 const SingleQuestion = ({ info, title }) => {
