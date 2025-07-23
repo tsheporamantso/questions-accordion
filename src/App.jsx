@@ -7,7 +7,7 @@ function App() {
   const [questions, setQuestions] = useState(data);
   return (
     <main>
-      <Questions questions={questions} />
+      <Questions questions={questions} seQuestions={setQuestions} />
     </main>
   );
 }
